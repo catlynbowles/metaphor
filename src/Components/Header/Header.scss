@@ -5,9 +5,8 @@
   flex-wrap: wrap;
   align-content: center;
   gap: 0 5rem;
-  padding: 1rem;
   justify-content: center;
-  margin:1rem;
+  margin: 4rem;
   border-bottom:  .2rem solid black;
  .nav-link,
   .home-link {
@@ -16,14 +15,17 @@
   }
 }
 
+h1 {
+    font-weight: 300;
+}
+
 .nav-link {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
-  height: 4rem;
-  font-weight: 700;
+  font-weight: 500;
+  gap: 4rem;
 }
 
 .nav-link-container {
