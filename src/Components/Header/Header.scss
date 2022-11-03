@@ -6,7 +6,7 @@
   align-content: center;
   gap: 0 5rem;
   justify-content: center;
-  margin: 4rem;
+  margin: 3.75rem;
   border-bottom:  .2rem solid black;
  .nav-link,
   .home-link {
@@ -22,10 +22,8 @@ h1 {
 .nav-link {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  font-weight: 500;
-  gap: 4rem;
+  font-weight: 300;
 }
 
 .nav-link-container {
@@ -36,7 +34,7 @@ h1 {
   gap: 2rem;
 }
 
-@media (min-width: 549px) {
+@media (min-width: 647px) {
     .header-container {
         justify-content: space-between;
         padding: 1rem 1.5rem;
