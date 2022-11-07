@@ -1,9 +1,8 @@
 import React from "react";
-
+import DropDown from "../../Components/DropDown/DropDown";
 
 const HomeView = () => {
-    return <p>HomeView</p>
-}
-
+  return <DropDown />;
+};
 
 export default HomeView;

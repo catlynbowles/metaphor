@@ -8,9 +8,6 @@ import HomeView from "../../Views/HomeView/HomeView";
 import PGalleryView from "../../Views/PGalleryView/PGalleryView";
 
 const Routes = () => {
-  useEffect(() => {
-    getMetData().then((data) => console.log(data));
-  });
   return (
     <Switch>
       <Route exact path="/">

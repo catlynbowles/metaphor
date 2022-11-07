@@ -1,8 +1,23 @@
-import React from "react";
-import "./Dropdown.scss";
+import React, { useEffect, useState } from "react";
+import { getMetData } from "../../Utilities/apiCalls";
+import "./DropDown.scss";
 
-const Dropdown = () => {
-  return {};
+const DropDown = () => {
+  const [departments, setDepartments] = useState([]);
+  const [selectedDepartment, setSelectedDepartment] = useState("");
+
+  useEffect(() => {
+    getMetData().then((data) => setDepartments(data.departments));
+  });
+
+  // const displayDepartments = () => {
+  //   return departments.reduce((acc, element) => {
+  //     acc.push(element.displayName)
+
+  //   }, []);
+  // };
+
+  return <select></select>;
 };
 
-export default { Dropdown };
+export default DropDown;
