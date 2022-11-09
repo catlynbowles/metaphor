@@ -10,12 +10,13 @@ const DropDown = () => {
     getMetData().then((data) => setDepartments(data.departments));
   });
 
-  // const displayDepartments = () => {
-  //   return departments.reduce((acc, element) => {
-  //     acc.push(element.displayName)
-
-  //   }, []);
-  // };
+  const displayDepartments = () => {
+    return departments.reduce((acc, element) => {
+      console.log(element.displayName);
+      acc.push(element.displayName);
+      return acc;
+    }, []);
+  };
 
   return <select></select>;
 };
