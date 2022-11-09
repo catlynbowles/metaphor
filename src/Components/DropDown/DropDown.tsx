@@ -11,7 +11,7 @@ const DropDown = ({setSelectedDepartment}: Prop) => {
   const [departments, setDepartments] = useState([]);
 
   useEffect(() => {
-    getMetData().then((data) => setDepartments(data.departments));
+    getMetData('departments').then((data) => setDepartments(data.departments));
   });
 
   const displayDepartments = () => {
