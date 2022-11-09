@@ -2,9 +2,13 @@ import React, { useEffect, useState } from "react";
 import { getMetData } from "../../Utilities/apiCalls";
 import "./DropDown.scss";
 
-const DropDown = () => {
+type Prop = {
+  setSelectedDepartment: any
+}
+// ^^ this needs a better type!
+
+const DropDown = ({setSelectedDepartment}: Prop) => {
   const [departments, setDepartments] = useState([]);
-  const [selectedDepartment, setSelectedDepartment] = useState("");
 
   useEffect(() => {
     getMetData().then((data) => setDepartments(data.departments));
@@ -21,6 +25,7 @@ const DropDown = () => {
       }
     );
   };
+
   return (
     <select onChange={(e) => setSelectedDepartment(e.target.value)}>
       <option>Choose a Department:</option>

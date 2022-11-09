@@ -13,9 +13,6 @@ const Routes = () => {
       <Route exact path="/">
         <HomeView />
       </Route>
-      <Route exact path="/gallery-view">
-        <GalleryView />
-      </Route>
       <Route exact path="/detail-view">
         <DetailView />
       </Route>
