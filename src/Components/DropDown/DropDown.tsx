@@ -13,12 +13,16 @@ const DropDown = () => {
   const displayDepartments = () => {
     return departments.map(
       (department: { departmentId: number; displayName: string }) => {
-        return <option>{department.displayName}</option>;
+        return (
+          <option value={department.departmentId}>
+            {department.displayName}
+          </option>
+        );
       }
     );
   };
   return (
-    <select>
+    <select onChange={(e) => setSelectedDepartment(e.target.value)}>
       <option>Choose a Department:</option>
       {displayDepartments()}
     </select>
