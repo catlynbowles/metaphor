@@ -11,14 +11,17 @@ const DropDown = () => {
   });
 
   const displayDepartments = () => {
-    return departments.reduce((acc, element) => {
-      console.log(element.displayName);
-      acc.push(element.displayName);
-      return acc;
-    }, []);
+    return departments.map(
+      (department: { departmentId: number; displayName: string }) => {
+        return <option>{department.displayName}</option>;
+      }
+    );
   };
-
-  return <select></select>;
+  return (
+    <select>
+      <option>Choose a Department:</option>
+      {displayDepartments()}
+    </select>
+  );
 };
-
 export default DropDown;
