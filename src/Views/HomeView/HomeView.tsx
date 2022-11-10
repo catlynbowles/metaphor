@@ -8,7 +8,7 @@ const HomeView = () => {
   return (
     <main>
       <DropDown setSelectedDepartment={setSelectedDepartment}/>
-      <GalleryView />
+      <GalleryView selectedDepartment={selectedDepartment}/>
     </main>
   )
 };

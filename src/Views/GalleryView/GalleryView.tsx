@@ -1,11 +1,13 @@
 import React from "react";
 
+type Prop = {
+  selectedDepartment: string
+}
 
-const GalleryView = () => {
+const GalleryView = ({selectedDepartment}: Prop) => {
     return (
-        <p>GalleryView</p>
+        <p>{selectedDepartment}</p>
     )
-
 }
 
 
