@@ -3,7 +3,7 @@ import DropDown from "../../Components/DropDown/DropDown";
 import GalleryView from "../GalleryView/GalleryView";
 
 const HomeView = () => {
-  const [selectedDepartment, setSelectedDepartment] = useState("");
+  const [selectedDepartment, setSelectedDepartment] = useState({departmentId: 0, displayName: ''});
 
   return (
     <main>

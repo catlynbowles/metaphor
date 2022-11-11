@@ -6,6 +6,8 @@ export const getMetData = async (deptName: string) => {
   return response;
 };
 
-// https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=1
-// getMetData(objects?departmentIds=1)
+// https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=6&hasImages=true
+// https://collectionapi.metmuseum.org/public/collection/v1/objects/[objectID]
+
+
 
