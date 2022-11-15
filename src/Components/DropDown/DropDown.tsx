@@ -15,8 +15,6 @@ const DropDown = ({setSelectedDepartment}: Prop) => {
   });
 
   const submitSelectedDepartment = (id: string) => {
-    console.log(typeof id)
-    console.log(departments)
     let matchedLocation = departments.find((dept: { departmentId: number; displayName: string }) => dept.departmentId === parseInt(id))
     let deptInfo = {
       departmentId: id,
@@ -39,7 +37,7 @@ const DropDown = ({setSelectedDepartment}: Prop) => {
 
   return (
     <select onChange={(e) => submitSelectedDepartment(e.target.value)}>
-      <option>Choose a Department:</option>
+      <option value='explore'>Explore</option>
       {displayDepartments()}
     </select>
   );

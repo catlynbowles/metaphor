@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getMetData } from "../../Utilities/apiCalls";
 
 type Prop = {
-  selectedDepartment: {departmentId: number; displayName: string;}
+  selectedDepartment: { departmentId: number; displayName: string; }
 }
 
 // search?departmentId=6&hasImages=true
@@ -11,7 +11,7 @@ const GalleryView = ({ selectedDepartment }: Prop) => {
   const [artTiles, setArtTiles] = useState([])
 
   useEffect(() => {
-    getMetData(`search?departmentId=${selectedDepartment.departmentId}&q=${selectedDepartment.displayName}&hasImages=true`).then(data => setArtTiles(data))
+    getMetData(`search?departmentId=${selectedDepartment.departmentId}&q=${selectedDepartment.displayName}&hasImages=true`).then(data => setArtTiles(data.objectIDs.slice(0, 6)))
   })
 
   return (
