@@ -11,11 +11,13 @@ const GalleryView = ({ selectedDepartment }: Prop) => {
   const [artTiles, setArtTiles] = useState([])
 
   useEffect(() => {
-    getMetData(`search?departmentId=${selectedDepartment.departmentId}&q=${selectedDepartment.displayName}&hasImages=true`).then(data => setArtTiles(data.objectIDs.slice(0, 6)))
+    if (selectedDepartment.displayName) {
+      getMetData(`search?departmentId=${selectedDepartment.departmentId}&q=${selectedDepartment.displayName}&hasImages=true`).then(data => setArtTiles(data.objectIDs.slice(0, 6)))
+    }
   })
 
   return (
-    <p>{selectedDepartment.displayName}</p>
+    <p>{selectedDepartment.displayName ? <p>{selectedDepartment.displayName}</p> : <p>no selection</p>}</p>
   )
 }
 

@@ -37,7 +37,7 @@ const DropDown = ({setSelectedDepartment}: Prop) => {
 
   return (
     <select onChange={(e) => submitSelectedDepartment(e.target.value)}>
-      <option value='explore'>Explore</option>
+      <option value="" selected disabled hidden>Explore</option>
       {displayDepartments()}
     </select>
   );
